@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nagy Károly Péter">
+    <meta name="copyright" content="Az oldal oktatási célokra jött létre">
+    <meta name="description" content="Az oldal bemutatja a League of Legends nevű videójáték egyik karakterét">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap" rel="stylesheet">
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    nev: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    jelszo: {
+                        required: true,
+                        minlength: 6
+                    },
+                    datum: {
+                        required: true,
+                    },
+                    pont: {
+                        required: true,
+                    },
+
+                },
+                messages: {
+                    nev: " Írd be a neved!",
+                    jelszo: {
+                        required: " Add meg a jelszavad!",
+                        minlength: " A jelszavad legalább 6 karakter hosszú legyen!"
+                    },
+                    email: " Kérlek valós email címet adj meg!",
+                    datum: " Válaszd ki a pontos dátumot!",
+                    pont: " Tudasd velünk a hősismeret pontjaidat!",
+                },
+            });
+        });
+    </script>
+    <title>Thresh fanoldal</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/threshfav.webp">
+</head>
+
+<body>
+    <a href="" id="cimlink"></a>
+    <header>
+        <h2>Thresh: A láncok őre</h2>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Története</a></li>
+                <li><a href="képességek.html">Képességek</a></li>
+                <li><a href="rúnák.html">Rúnák</a></li>
+                <li><a href="tárgyak.html">Tárgyak</a></li>
+                <li><a href="kinézetek.html">Kinézetek</a></li>
+                <li><a class="active" href="kérdőív.html">Kérdőív</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Kérdőív</h1>
+            <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="myform" novalidate>
+                <p>
+                    <label>Név:
+                        <input type="text" name="nev" size="40">
+                    </label>
+                </p>
+                <p>
+                    <label>E-mail:
+                        <input type="email" name="email" size="40">
+                    </label>
+                </p>
+                <p>
+                    <label>Jelszó:
+                        <input type="password" name="jelszo" size="30">
+                    </label>
+                </p>
+                <p>
+                    Melyik kinézet a kedvenced?<br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="melytenger">
+                        Mélytengeri
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="2013asvb">
+                        2013-as vb
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="verhold">
+                        Vérhold
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="ssw">
+                        SSW
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="sotetcsillag">
+                        Sötét Csillag
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="parbajhos">
+                        Párbajhős
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="pulzustuz">
+                        Pulzustűz
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="pulzustuztekintely">
+                        Pulzustűz (Tekintély kiadás)
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="fpx">
+                        FPX
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="lelekvirag">
+                        Lélekvirág
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="elszabadult">
+                        Elszabadult
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="acelsarkany">
+                        Acélsárkány
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="pulzustuz2022">
+                        Pulzustűz (Tekintély kiadás, 2022)
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="holdcsaszar">
+                        Holdcsászár
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="telkegyeltje">
+                        Tél kegyeltje
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="kedvenc" value="gondnok">
+                        Gondnok
+                    </label>
+                    <br>
+                </p>
+                <p>
+                    <label>Mikor volt az első meccsed a karakterrel?<br>
+                        <input type="date" name="datum">
+                    </label>
+                </p>
+                <p>
+                    <label>Mennyi hősismereti pontod van Thresh-el? (Ha nem tudod pontosan a választ, töltsd ki a lent
+                        található hősismeret számlálót!)<br>
+                        <input name="pont" type="number" max="30000000" min="0" step="1">
+                    </label>
+                </p>
+                <p>
+                    <label>Ha van ötleted jobb rúnákra vagy tárgyakra, kérlek írd le:<br>
+                        <textarea rows="5" name="ujak" cols="30"></textarea>
+                    </label>
+                </p>
+                <label>
+                    <input type="submit" name="bekuldve" value="Beküldés">
+                </label>
+                <label>
+                    <input type="reset" name="ujrainditas" value="Újraindítás">
+                </label>
+            </form>
+            <h1>Hősismeret Számoló</h1>
+            <form id="calculatorForm">
+                <label for="meccsek">Játszott meccsek száma:</label>
+                <input type="number" id="meccsek" min="1" required><br><br>
+
+                <label for="baratok">Csapattársak száma (0-4):</label>
+                <input type="number" id="baratok" min="0" max="4" required><br><br>
+
+                <label>Az átlagos meccsid ideje több mint 25 perc?</label><br><br>
+                <input type="radio" id="yes" name="tobbvkevesebb" value="yes" required>
+                <label for="yes">Igen</label><br><br>
+                <input type="radio" id="no" name="tobbvkevesebb" value="no">
+                <label for="no">Nem</label><br><br>
+
+                <button type="button" onclick="calculateScore()">Számolás</button>
+            </form>
+
+            <h3>Eredmény:</h3>
+            <p id="result">Add meg az adatokat és nyomd meg a "Számolás" gombot. (Ez csak egy megközelítő érték!)</p>
+
+            <script>
+                function calculateScore() {
+                    const meccsek = parseInt(document.getElementById("meccsek").value);
+                    const baratok = parseInt(document.getElementById("baratok").value);
+                    const longerThan25 = document.querySelector('input[name="tobbvkevesebb"]:checked').value;
+
+                    if (baratok < 0 || baratok > 4) {
+                        alert("A csapattársak száma csak 0 és 4 között lehet!");
+                        return;
+                    }
+
+                    let score = meccsek * 500;
+
+                    if (baratok === 1) {
+                        score *= 1.02;
+                    }
+
+                    if (baratok === 2) {
+                        score *= 1.04;
+                    }
+
+                    if (baratok === 3) {
+                        score *= 1.06;
+                    }
+
+                    if (baratok === 4) {
+                        score *= 1.10;
+                    }
+
+                    if (longerThan25 === "yes") {
+                        score *= 1.05;
+                    }
+                    document.getElementById("result").textContent = `Az hősismereti pontod nagyjából: ${score.toFixed(0)}`;
+                }
+            </script>
+            <a href="#cimlink" id="ugras">Ugrás az elejére</a>
+        </article>
+        <aside>
+            <h3>Kapcsolódó térség:</h3>
+            <p>Az Árny-szigetek</p>
+            <img src="images/árnyszigetek.png" alt="Ez egy kép az Árny-szigetekről">
+            <h3>Szerep:</h3>
+            <p>Támogató</p>
+            <img src="images/kicsithresh.jpg" alt="Ez egy kép Thresh-ről">
+        </aside>
+    </div>
+    <footer>
+        <p>Kizárólag oktatási célokra</p>
+    </footer>
+</body>
+
+</html>

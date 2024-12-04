@@ -1,0 +1,159 @@
+
+* {
+    box-sizing: border-box;
+}
+html{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Yuji Mai', serif;
+}
+body{
+    background-color: darkslategray;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+.container > *{
+    height: fit-content;
+}
+header{
+    margin: 0;
+    height: 300px;
+    background-image: url("images/Thresh.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+article{
+    flex: 1 1 100%;
+    color: orangered;
+    background-color: rgb(3, 37, 2);
+    text-align: justify;
+    border-radius: 15px;
+    padding: 15px;
+}
+aside{
+    flex: 1 1 100%;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    flex: 1 1 100%;
+    padding: 5px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: dashed;
+}
+nav ul li {
+    border: dotted;
+}
+nav ul li a {
+    display: block;
+    padding: 5px;
+    color: yellowgreen;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: green;
+}
+nav ul li a.active {
+    background-color: gray;
+}
+h1{
+    text-decoration: underline;
+    font-style: italic;
+    color: rgb(66, 171, 175);
+}
+h2{
+    margin: 0;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    align-self: center;
+    font-size: 30px;
+    text-shadow: 15px 15px 15px black;
+}
+#ugras{
+    color: white;    
+}
+#ugras:hover{
+    color:red;
+}
+
+footer{
+    text-align: center;
+    background-color: yellow;
+    padding: 3px;
+}
+
+label.error {
+    color: red;
+}
+.slider {
+    width: 80%;
+    min-width: 400px;
+    margin: 100px auto;
+    }
+    .slick-slide {margin: 5px 5px;}
+    .slick-slide img {width: 50%;}
+    .slick-prev:before, .slick-next:before {
+    color: black;
+    }
+    .slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+    }
+    .slick-active { opacity: .5; }
+    .slick-current { opacity: 1; }
+
+@media all and (min-width: 600px) {
+    nav{
+        flex-basis: 23%;
+    }
+    nav ul li{
+        margin: 5px;
+    }
+    article{
+        flex-basis: 48%;
+    }
+    aside {
+        flex-basis: 23%;
+    }
+}
+
+@media all and (min-width: 768px) {
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul li{
+        margin: 0;
+    }
+    article{
+        margin: 5px;
+    }
+    aside{
+        margin: 5px;
+    }
+}

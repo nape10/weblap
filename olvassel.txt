@@ -1,0 +1,6 @@
+1. Nagy Károly Péter
+2. https://nape10.github.io/weblap/
+3. A weblap egy számítógépes játék egyik karakterjét mutatja be: Thresh-t. Ez egy fanoldal, ami a nézőket segíti a karakter megismerésében.
+4. A 6. oldalon, melynek neve: Kérdőív. Ha a felhasználó nem tudja fejből a hősismereti pontjait, itt megtalálja a hősismereti számlálót, mely egy közelítő értéket megad számára bizonyos adatok beírása után.
+5. Yuji Mai nevű google web fontot használok az egész weblapon, kivéve az angol abc-ben nem létező betűknél, ott serif-et használok.
+6. Nem vettem át kódot.
